@@ -1,0 +1,28 @@
+{
+  "name": "discord-gif-bot",
+  "version": "1.0.0",
+  "description": "A free, open-source Discord bot with a single /gif command that converts uploaded images/videos into optimized GIFs.",
+  "private": true,
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "deploy-commands": "ts-node src/deploy-commands.ts",
+    "deploy-commands:build": "node dist/deploy-commands.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.4"
+  }
+}
